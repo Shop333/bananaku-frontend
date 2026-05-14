@@ -11,6 +11,12 @@ cd bananaku-frontend
 
 ```
 
+# Clone repository
+git clone https://github.com/Shop333/bananaku-beckend.git
+cd bananaku-beckend
+
+```
+
 
 
 ---
