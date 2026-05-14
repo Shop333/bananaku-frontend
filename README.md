@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Landing page bisnis pisang premium berbasis **Next.js 16** dengan desain dark luxury dan koneksi ke backend NestJS + Supabase.
 
-## Getting Started
+## 🌐 Live Demo
 
-First, run the development server:
+[https://bananaku-frontend.vercel.app](https://bananaku-frontend.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Teknologi | Keterangan |
+|---|---|
+| Next.js 16 | React framework dengan App Router |
+| TypeScript | Type-safe JavaScript |
+| Tailwind CSS v4 | Utility-first CSS framework |
+| Framer Motion | Animasi dan transisi |
+| Playfair Display | Font heading serif premium |
+| Plus Jakarta Sans | Font body modern |
+| Vercel | Platform deployment |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📁 Struktur Folder
+frontend/
+├── public/
+│   ├── hero/           # Background hero section
+│   ├── about/          # Background about section
+│   ├── gallery/        # Foto galeri (6 foto)
+│   └── products/       # Foto produk (12 foto)
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx      # Root layout
+│   │   ├── page.tsx        # Halaman utama
+│   │   ├── not-found.tsx   # Halaman 404
+│   │   ├── home/           # Home route group
+│   │   └── admin/          # Admin dashboard
+│   ├── components/
+│   │   ├── layout/         # Navbar, Footer, MobileMenu
+│   │   ├── sections/       # Semua section landing page
+│   │   ├── common/         # Komponen reusable
+│   │   └── ui/             # Komponen UI dasar
+│   ├── services/           # API service functions
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility functions
+│   ├── types/              # TypeScript types
+│   ├── constants/          # Data statis & konfigurasi
+│   └── styles/             # CSS tambahan
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Sections Landing Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Section | Deskripsi |
+|---|---|
+| 🦸 Hero | Banner utama dengan background foto & animasi |
+| 📖 About | Profil perusahaan dengan foto & statistik |
+| 🍌 Products | Grid produk dinamis dari API + filter kategori |
+| 💪 Benefits | Manfaat pisang dengan statistik nutrisi |
+| 🖼️ Gallery | Masonry grid foto kebun & produk |
+| 💰 Pricing | Paket harga dari database + modal order |
+| ⭐ Testimonials | Ulasan pelanggan dari database |
+| 📞 Contact | Form kontak tersimpan ke database |
+| 🚀 CTA | Call to action & WhatsApp button |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚙️ Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Buat file `.env.local` di root folder:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+NEXT_PUBLIC_API_URL=http://localhost:3001/api
+Untuk production di Vercel:
+NEXT_PUBLIC_API_URL=https://bananaku-backend.vercel.app/api
+🚀 Cara Menjalankan
+Prerequisites
+Node.js 18+
+npm atau yarn
+Install & Run
+# Clone repository
+git clone https://github.com/Shop333/bananaku-frontend.git
+cd bananaku-frontend
+
+# Install dependencies
+npm install
+
+# Jalankan development server
+npx next dev -H 127.0.0.1
+
+# Buka di browser
+# http://127.0.0.1:3000
+Build Production
+npm run build
+npm start
+🖼️ Format Gambar
+Semua gambar menggunakan format .webp untuk performa optimal.
+Folder
+File
+public/hero/
+hero-bg.webp
+public/about/
+about-bg.webp
+public/gallery/
+kebun.webp, panen.webp, sortir.webp, organik.webp, ekspor.webp, delivery.webp
+public/products/
+cavendish.webp, kepok.webp, raja.webp, ambon.webp, barangan.webp, mas-kirana.webp, tanduk.webp, cavendish-box.webp, keripik-original.webp, keripik-coklat.webp, keripik-keju.webp, chips-mix.webp
+🔗 API Endpoints yang Digunakan
+Endpoint
+Method
+Keterangan
+/api/products
+GET
+Ambil semua produk
+/api/products?category=segar
+GET
+Filter produk by kategori
+/api/orders
+POST
+Buat order produk
+/api/pricing/plans
+GET
+Ambil paket harga
+/api/pricing/orders
+POST
+Buat order pricing
+/api/testimonials
+GET
+Ambil testimoni
+/api/contact
+POST
+Kirim pesan kontak
+📦 Deployment
+Project ini di-deploy otomatis ke Vercel setiap kali ada push ke branch main.
+# Push ke GitHub → auto deploy ke Vercel
+git add .
+git commit -m "your message"
+git push
