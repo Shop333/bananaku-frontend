@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="http://nextjs.com/" target="blank"><img src="https://nextjs.com/img/logo-small.svg" width="120" alt="Next Logo" /></a>
+</p>
+
+
+
+
 Landing page bisnis pisang premium berbasis **Next.js 16** dengan desain dark luxury dan koneksi ke backend NestJS + Supabase.
 
 ## 🌐 Live Demo
