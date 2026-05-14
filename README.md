@@ -20,32 +20,7 @@ Landing page bisnis pisang premium berbasis **Next.js 16** dengan desain dark lu
 
 ---
 
-## 📁 Struktur Folder
-frontend/
-├── public/
-│   ├── hero/           # Background hero section
-│   ├── about/          # Background about section
-│   ├── gallery/        # Foto galeri (6 foto)
-│   └── products/       # Foto produk (12 foto)
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx      # Root layout
-│   │   ├── page.tsx        # Halaman utama
-│   │   ├── not-found.tsx   # Halaman 404
-│   │   ├── home/           # Home route group
-│   │   └── admin/          # Admin dashboard
-│   ├── components/
-│   │   ├── layout/         # Navbar, Footer, MobileMenu
-│   │   ├── sections/       # Semua section landing page
-│   │   ├── common/         # Komponen reusable
-│   │   └── ui/             # Komponen UI dasar
-│   ├── services/           # API service functions
-│   ├── hooks/              # Custom React hooks
-│   ├── lib/                # Utility functions
-│   ├── types/              # TypeScript types
-│   ├── constants/          # Data statis & konfigurasi
-│   └── styles/             # CSS tambahan
----
+
 
 ## 📄 Sections Landing Page
 
