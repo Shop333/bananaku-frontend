@@ -4,6 +4,12 @@ Landing page bisnis pisang premium berbasis **Next.js 16** dengan desain dark lu
 
 [https://bananaku-frontend.vercel.app](https://bananaku-frontend.vercel.app)
 
+```
+# Clone repository
+git clone https://github.com/Shop333/bananaku-frontend.git
+cd bananaku-frontend
+
+
 ---
 
 ## 🛠️ Tech Stack
@@ -37,75 +43,3 @@ Landing page bisnis pisang premium berbasis **Next.js 16** dengan desain dark lu
 | 🚀 CTA | Call to action & WhatsApp button |
 
 ---
-
-## ⚙️ Environment Variables
-
-Buat file `.env.local` di root folder:
-
-```env
-NEXT_PUBLIC_API_URL=http://localhost:3001/api
-Untuk production di Vercel:
-NEXT_PUBLIC_API_URL=https://bananaku-backend.vercel.app/api
-🚀 Cara Menjalankan
-Prerequisites
-Node.js 18+
-npm atau yarn
-Install & Run
-# Clone repository
-git clone https://github.com/Shop333/bananaku-frontend.git
-cd bananaku-frontend
-
-# Install dependencies
-npm install
-
-# Jalankan development server
-npx next dev -H 127.0.0.1
-
-# Buka di browser
-# http://127.0.0.1:3000
-Build Production
-npm run build
-npm start
-🖼️ Format Gambar
-Semua gambar menggunakan format .webp untuk performa optimal.
-Folder
-File
-public/hero/
-hero-bg.webp
-public/about/
-about-bg.webp
-public/gallery/
-kebun.webp, panen.webp, sortir.webp, organik.webp, ekspor.webp, delivery.webp
-public/products/
-cavendish.webp, kepok.webp, raja.webp, ambon.webp, barangan.webp, mas-kirana.webp, tanduk.webp, cavendish-box.webp, keripik-original.webp, keripik-coklat.webp, keripik-keju.webp, chips-mix.webp
-🔗 API Endpoints yang Digunakan
-Endpoint
-Method
-Keterangan
-/api/products
-GET
-Ambil semua produk
-/api/products?category=segar
-GET
-Filter produk by kategori
-/api/orders
-POST
-Buat order produk
-/api/pricing/plans
-GET
-Ambil paket harga
-/api/pricing/orders
-POST
-Buat order pricing
-/api/testimonials
-GET
-Ambil testimoni
-/api/contact
-POST
-Kirim pesan kontak
-📦 Deployment
-Project ini di-deploy otomatis ke Vercel setiap kali ada push ke branch main.
-# Push ke GitHub → auto deploy ke Vercel
-git add .
-git commit -m "your message"
-git push
